@@ -136,16 +136,38 @@ window.addEventListener('mouseout', function() {
 
 // Detect if the device is mobile
 function isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
+    return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
 }
 
-// Trigger particle effect automatically on mobile
-if (isMobileDevice()) {
-    window.dispatchEvent(new MouseEvent('mousemove', {
-        clientX: window.innerWidth / 2, // Simulate the mouse at the center of the screen
-        clientY: window.innerHeight / 2
-    }));
+// Force particles to initialize on mobile devices
+function initializeParticlesOnMobile() {
+    if (isMobileDevice()) {
+        // Simulate a mouse movement to activate the particle effect
+        const simulatedEvent = new MouseEvent("mousemove", {
+            bubbles: true,
+            cancelable: true,
+            clientX: window.innerWidth / 2, // Center of the screen
+            clientY: window.innerHeight / 2, // Center of the screen
+        });
+        window.dispatchEvent(simulatedEvent);
+
+        // As a fallback, listen to touchstart and re-initialize particles if needed
+        window.addEventListener('touchstart', () => {
+            if (!particlesArray || particlesArray.length === 0) {
+                init();
+                animate();
+            }
+        }, { once: true }); // Only trigger once
+    }
 }
+
+// Run the initialization logic after DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    init(); // Ensure particles are initialized
+    animate(); // Start animation
+    initializeParticlesOnMobile(); // Handle mobile-specific rendering
+});
+
 
 
 init();
