@@ -133,6 +133,21 @@ window.addEventListener('mouseout', function() {
     mouse.y = undefined;
 });
 
+
+// Detect if the device is mobile
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+// Trigger particle effect automatically on mobile
+if (isMobileDevice()) {
+    window.dispatchEvent(new MouseEvent('mousemove', {
+        clientX: window.innerWidth / 2, // Simulate the mouse at the center of the screen
+        clientY: window.innerHeight / 2
+    }));
+}
+
+
 init();
 animate();
 
