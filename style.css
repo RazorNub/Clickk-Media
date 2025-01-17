@@ -1450,8 +1450,7 @@ animation: shine 2s infinite alternate; /* Added animation for shine effect */
         margin-left: 30px;
     }
     #short-projects {
-        /* Flexbox layout for small screens */
-        display: flex;
+        /* border: 2px solid red; */
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
@@ -1462,42 +1461,25 @@ animation: shine 2s infinite alternate; /* Added animation for shine effect */
         margin: 20px; /* Add spacing around each iframe */
         padding: 0; /* Reset padding if unnecessary */
         display: block; /* Ensures proper layout handling */
-        width: 100%; /* Adjust width to 100% for responsiveness */
+        width: 100%; /* Adjust width as needed */
         height: auto; /* Ensures iframe maintains aspect ratio */
         margin-top: -50px;
     }
     
-    /* Media query for screens larger than 480px (iPhone 15-like devices) */
-    @media screen and (min-width: 480px) {
-        #short-works {
-            margin-top: 200px; /* Adjusted margin to avoid overlap */
-        }
-        
-        #short-projects {
-            flex-direction: row; /* Align items in a row for larger screens */
-            justify-content: space-between; /* Add space between items */
-            margin-right: 0; /* Reset margin for better alignment */
-        }
     
-        .shorts > iframe {
-            width: 48%; /* Adjust width of iframe to avoid overlap */
-            margin-top: 10px; /* Reduced margin-top to make space between elements */
-        }
+    #short-works {
+        /* border: 2px solid red; */
+        margin-bottom: 20px; /* Reduced bottom margin to reduce spacing */
+        margin-top: 800px; /* Reduced top margin to bring it closer to the section above */
     }
     
-    /* Media query for very small devices (like the 320px width) */
-    @media screen and (max-width: 320px) {
-        #short-works {
-            margin-top: 600px; /* Adjust top margin for smaller screens */
-        }
-    
-        .shorts > iframe {
-            width: 100%; /* Ensure iframe takes full width on small screens */
-            margin-top: -30px; /* Adjust margin-top for small screens */
-        }
+
+    /* Media query for iPhone 15 */
+    @media (max-width: 390px) and (max-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    #short-works {
+        margin-top: 1000px; /* Push the section further down specifically for iPhone 15 */
     }
-    
-    
+}
 
 
 /* Styling for thumbnails section */
