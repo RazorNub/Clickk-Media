@@ -1194,11 +1194,11 @@ animation: shine 2s infinite alternate; /* Added animation for shine effect */
     #why-us {
         padding: 15% 0;
         margin-bottom: 20px;
-        margin-top: -500px; /* Reduced margin-top to minimize gap */
+        margin-top: -400px; /* Reduced margin-top to minimize gap */
     }
     
     #why-us > h1 {
-        font-size: 40px;
+        font-size: 35px;
         margin-bottom: 50px;
     }
     
@@ -1342,7 +1342,7 @@ animation: shine 2s infinite alternate; /* Added animation for shine effect */
         width: 100%; /* Forces the button to appear below all images */
         display: flex;
         justify-content: center;
-        margin-top: 650px; /* Adds space between the images and button */
+        margin-top: 800px; /* Adds space between the images and button */
     }
     
     /* For smaller screens (max-width: 480px) */
@@ -1363,7 +1363,7 @@ animation: shine 2s infinite alternate; /* Added animation for shine effect */
     
     /* Additional styles */
     #our-clients {
-        margin-top: 200px;
+        margin-top: 150px;
     }
     
 
@@ -1373,7 +1373,7 @@ animation: shine 2s infinite alternate; /* Added animation for shine effect */
 
     #what-they-say {
         padding: 100px 0; /* Increase top padding to push it down */
-        margin-top: 600px; /* Adds extra spacing before the section */
+        margin-top: 925px; /* Adds extra spacing before the section */
     }
     
     #testimonials {
@@ -1458,25 +1458,26 @@ animation: shine 2s infinite alternate; /* Added animation for shine effect */
     }
     
     .shorts > iframe {
-        margin: 10px; /* Add spacing around each iframe */
+        margin: 20px; /* Add spacing around each iframe */
         padding: 0; /* Reset padding if unnecessary */
         display: block; /* Ensures proper layout handling */
         width: 100%; /* Adjust width as needed */
         height: auto; /* Ensures iframe maintains aspect ratio */
+        margin-top: -50px;
     }
     
     
     #short-works {
         /* border: 2px solid red; */
         margin-bottom: 20px; /* Reduced bottom margin to reduce spacing */
-        margin-top: 400px; /* Reduced top margin to bring it closer to the section above */
+        margin-top: 800px; /* Reduced top margin to bring it closer to the section above */
     }
     
 
 
 /* Styling for thumbnails section */
 .thumbnails-section {
-    margin-top: 1600px; /* Keep the section further down */
+    margin-top: 1500px; /* Keep the section further down */
     padding: 20px 0; /* Adjust padding to your liking */
 }
 
@@ -1543,6 +1544,12 @@ animation: shine 2s infinite alternate; /* Added animation for shine effect */
 }
 
 /* Styling for social links */
+.social-links {
+    display: inline-block; /* Ensure it behaves like a block within the centered column */
+    position: relative; /* Allow positioning adjustments */
+    left: 10px; /* Adjust this value to shift it to the right */
+}
+
 .social-links a {
     margin: 0 10px; /* Add spacing between social media icons */
     color: #333; /* Adjust icon color */
@@ -1553,5 +1560,12 @@ animation: shine 2s infinite alternate; /* Added animation for shine effect */
 .social-links a:hover {
     color: #5A5A5A; /* Change color on hover */
 }
+
+.Contact {
+    margin-left: 13px;
+}
+
+
+
 
 }
