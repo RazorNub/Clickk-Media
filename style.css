@@ -1477,7 +1477,8 @@ animation: shine 2s infinite alternate; /* Added animation for shine effect */
     /* Media query for iPhone 15 */
     @media (max-width: 393px) and (max-height: 852px) and (-webkit-device-pixel-ratio: 3) {
     #short-works {
-        margin-top: 2000px; /* Push the section further down specifically for iPhone 15 */
+        margin-top: 1300px; /* Push the section further down specifically for iPhone 15 */
+        margin-bottom: -400px;
     }
 }
 
